@@ -6,8 +6,8 @@
       <class name="org.kunalchavan.TotalPriceTestCase">
         <methods>
           <include name="setup"/>
-          <include name="tearDown"/>
           <include name="totalPrice"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- org.kunalchavan.TotalPriceTestCase -->
     </classes>

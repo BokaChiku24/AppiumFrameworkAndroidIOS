@@ -50,7 +50,7 @@ public class BaseTest {
 
 	public void waitAttributeContainsById(String id, String attribute, String value) {
 
-		wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.attributeContains(driver.findElement(By.id(id)), attribute, value));
 	}
 

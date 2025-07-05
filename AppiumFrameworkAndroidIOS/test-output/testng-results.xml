@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-05T16:42:34 IST" name="Default suite" finished-at="2025-07-05T16:42:54 IST" duration-ms="19762">
+  <suite started-at="2025-07-05T17:18:10 IST" name="Default suite" finished-at="2025-07-05T17:18:26 IST" duration-ms="15697">
     <groups>
     </groups>
-    <test started-at="2025-07-05T16:42:34 IST" name="Default test" finished-at="2025-07-05T16:42:54 IST" duration-ms="19762">
+    <test started-at="2025-07-05T17:18:10 IST" name="Default test" finished-at="2025-07-05T17:18:26 IST" duration-ms="15697">
       <class name="org.kunalchavan.TotalPriceTestCase">
-        <test-method is-config="true" signature="setup()[pri:0, instance:org.kunalchavan.TotalPriceTestCase@2b30a42c]" started-at="2025-07-05T16:42:34 IST" name="setup" finished-at="2025-07-05T16:42:38 IST" duration-ms="4085" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:org.kunalchavan.TotalPriceTestCase@2b30a42c]" started-at="2025-07-05T17:18:10 IST" name="setup" finished-at="2025-07-05T17:18:14 IST" duration-ms="3682" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="totalPrice()[pri:0, instance:org.kunalchavan.TotalPriceTestCase@2b30a42c]" started-at="2025-07-05T16:42:38 IST" name="totalPrice" finished-at="2025-07-05T16:42:50 IST" duration-ms="12032" status="PASS">
+        <test-method signature="totalPrice()[pri:0, instance:org.kunalchavan.TotalPriceTestCase@2b30a42c]" started-at="2025-07-05T17:18:14 IST" name="totalPrice" finished-at="2025-07-05T17:18:26 IST" duration-ms="11802" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- totalPrice -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.kunalchavan.TotalPriceTestCase@2b30a42c]" started-at="2025-07-05T16:42:50 IST" name="tearDown" finished-at="2025-07-05T16:42:54 IST" duration-ms="3625" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.kunalchavan.TotalPriceTestCase@2b30a42c]" started-at="2025-07-05T17:18:26 IST" name="tearDown" finished-at="2025-07-05T17:18:26 IST" duration-ms="192" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
