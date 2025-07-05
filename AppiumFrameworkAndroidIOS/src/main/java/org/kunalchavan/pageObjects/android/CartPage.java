@@ -87,7 +87,7 @@ public class CartPage extends AndroidActions {
 		checkbox.click();
 	}
 	
-	public void cartSubmit() {
+	public void submitOrder() {
 		cartSubmit.click();
 	}
 
