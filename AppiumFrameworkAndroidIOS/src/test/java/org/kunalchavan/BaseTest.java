@@ -6,6 +6,10 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.time.Duration;
 
+import org.kunalchavan.pageObjects.android.FormPage;
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
@@ -19,6 +23,8 @@ public class BaseTest {
 	AppiumDriverLocalService service;
 	UiAutomator2Options options;
 	public AndroidDriver driver;
+	public FormPage formPage;
+	WebDriverWait wait;
 
 	@BeforeClass
 	public void setup() {
@@ -33,10 +39,19 @@ public class BaseTest {
 		try {
 			driver = new AndroidDriver(new URI("http://127.0.0.1:4723/").toURL(), options);
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+			formPage = new FormPage(driver);
 		} catch (MalformedURLException | URISyntaxException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+
+	}
+
+	public void waitAttributeContainsById(String id, String attribute, String value) {
+
+		wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait.until(ExpectedConditions.attributeContains(driver.findElement(By.id(id)), attribute, value));
 	}
 
 	@AfterClass

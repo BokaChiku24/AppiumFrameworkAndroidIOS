@@ -32,8 +32,9 @@ public class ProductCatalogue extends AndroidActions {
 		cartItem.get(index).click();
 	}
 	
-	public void goToTheCartPage() {
+	public CartPage goToTheCartPage() {
 		addCartButton.click();
+		return new CartPage(driver);
 	}
 	
 }
