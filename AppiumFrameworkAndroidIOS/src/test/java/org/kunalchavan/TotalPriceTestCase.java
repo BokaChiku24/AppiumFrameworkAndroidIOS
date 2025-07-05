@@ -21,9 +21,7 @@ public class TotalPriceTestCase extends BaseTest {
 		formPage.countryDropdown(country);
 		formPage.setName("Kunal Chavan");
 		formPage.setGender("Female");
-		formPage.submitForm();
-		
-		ProductCatalogue productCatalouge = new ProductCatalogue(driver);
+		ProductCatalogue productCatalouge = formPage.submitForm();
 		productCatalouge.addItemToCartByIndex(0);
 		productCatalouge.addItemToCartByIndex(0);
 		productCatalouge.goToTheCartPage();
