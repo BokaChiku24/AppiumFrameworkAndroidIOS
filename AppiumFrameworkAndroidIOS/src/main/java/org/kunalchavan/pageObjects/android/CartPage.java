@@ -28,6 +28,27 @@ public class CartPage extends AndroidActions {
 	private WebElement totalAmount;
 	//driver.findElement(By.id("com.androidsample.generalstore:id/totalAmountLbl")
 	
+	@AndroidFindBy(id="com.androidsample.generalstore:id/termsButton")
+	private WebElement termsButton;
+	//driver.findElement(By.id("com.androidsample.generalstore:id/termsButton"))
+	
+	@AndroidFindBy(className = "android.widget.CheckBox")
+	private WebElement checkbox;
+	//driver.findElement(By.className("android.widget.CheckBox")).click();
+
+	@AndroidFindBy(id="com.androidsample.generalstore:id/alertTitle")
+	private WebElement alertTitle;
+	//driver.findElement(By.id("com.androidsample.generalstore:id/alertTitle"));
+	
+	@AndroidFindBy(id="android:id/message")
+	private WebElement alertMessage;
+	//driver.findElement(By.id("android:id/message")
+	
+	@AndroidFindBy(id = "android:id/button1")
+	private WebElement cartSubmit;
+	//driver.findElement(By.id("android:id/button1")).click();
+
+	
 	public CartPage(AndroidDriver driver) {
 		super(driver);
 		this.driver = driver;
@@ -44,10 +65,30 @@ public class CartPage extends AndroidActions {
 		return productFinal = Double.parseDouble(totalAmount.getText().replace("$", ""));
 	}
 	
-	public void addition(List<WebElement> list) {
+	private void addition(List<WebElement> list) {
 		for (int i = 0; i < list.size(); i++) {
 			priceTotal = priceTotal + Double.parseDouble(list.get(i).getText().replace("$", ""));
 		}
+	}
+	
+	public void termButton() {
+		logPress(termsButton);
+	}
+	
+	public String alertTitle() {
+		return alertTitle.getText();
+	}
+	
+	public String alertMessage() {
+		return alertMessage.getText();
+	}
+	
+	public void checkboxCheck() {
+		checkbox.click();
+	}
+	
+	public void cartSubmit() {
+		cartSubmit.click();
 	}
 
 }
