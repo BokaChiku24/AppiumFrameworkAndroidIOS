@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="org.kunalchavan.TotalPriceTestCase">
+      <class name="org.kunalchavan.iosTest.IOSAlert">
         <methods>
           <include name="setup"/>
-          <include name="totalPrice"/>
           <include name="tearDown"/>
+          <include name="iOSBasic"/>
         </methods>
-      </class> <!-- org.kunalchavan.TotalPriceTestCase -->
+      </class> <!-- org.kunalchavan.iosTest.IOSAlert -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

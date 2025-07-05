@@ -1,4 +1,4 @@
-package org.kunalchavan;
+package org.kunalchavan.androidTest;
 
 import java.io.File;
 import java.net.MalformedURLException;
@@ -18,7 +18,7 @@ import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
 
-public class BaseTest {
+public class AndroidBaseTest {
 
 	AppiumDriverLocalService service;
 	UiAutomator2Options options;

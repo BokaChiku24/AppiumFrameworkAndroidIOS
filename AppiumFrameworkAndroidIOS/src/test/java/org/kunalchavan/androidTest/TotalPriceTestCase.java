@@ -1,11 +1,11 @@
-package org.kunalchavan;
+package org.kunalchavan.androidTest;
 
 import org.kunalchavan.pageObjects.android.CartPage;
 import org.kunalchavan.pageObjects.android.ProductCatalogue;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TotalPriceTestCase extends BaseTest {
+public class TotalPriceTestCase extends AndroidBaseTest {
 
 	@Test
 	public void totalPrice() {
