@@ -12,8 +12,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import utils.AppiumUtils;
-
 public class TotalPriceTestCase extends AndroidBaseTest {
 	
 	@BeforeMethod
@@ -55,14 +53,14 @@ public class TotalPriceTestCase extends AndroidBaseTest {
 	
 	@DataProvider(name = "totalPrice")
 	public Object[][] getDataTotalPrice() throws IOException {
-		List<HashMap<String,String>>data = AppiumUtils.getJsonData(System.getProperty("user.dir") + "/src/test/resources/testData/eCommerce.json");
+		List<HashMap<String,String>>data = getJsonData(System.getProperty("user.dir") + "/src/test/resources/testData/eCommerce.json");
 		//return new Object[][] {{"Argentina","Kunal Chavan","Male"}};
 		return new Object[][] {{data.get(0)}};
 	}
 	
 	@DataProvider(name = "validaton")
 	public Object[][] getDataValidation(){
-		return new Object[][] {{"Argentina","Male"},{"France","Female"}};
+		return new Object[][] {{"Argentina","Male"},{"Brazil","Female"}};
 	}
 
 }

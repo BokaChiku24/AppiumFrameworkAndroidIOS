@@ -18,8 +18,9 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
+import utils.AppiumUtils;
 
-public class AndroidBaseTest{
+public class AndroidBaseTest extends AppiumUtils{
 
 	AppiumDriverLocalService service;
 	UiAutomator2Options options;

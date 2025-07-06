@@ -5,9 +5,9 @@
     <classes>
       <class name="org.kunalchavan.androidTest.TotalPriceTestCase">
         <methods>
-          <include name="tearDown"/>
-          <include name="totalPrice" invocation-numbers="0 1"/>
           <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="totalPrice" invocation-numbers="0"/>
           <include name="preSetup"/>
         </methods>
       </class> <!-- org.kunalchavan.androidTest.TotalPriceTestCase -->

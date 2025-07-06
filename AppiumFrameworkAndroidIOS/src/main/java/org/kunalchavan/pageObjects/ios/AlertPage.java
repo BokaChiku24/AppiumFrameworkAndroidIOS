@@ -50,7 +50,7 @@ public class AlertPage extends IOSActions {
 	
 	public void confirmAlert() {
 		confirmAlertPopup.click();
-		waitAttributeContainsByAccessibilityId("A message should be a short, complete sentence.", "name",
+		waitAttributeContainsByAccessibilityId(driver, "A message should be a short, complete sentence.", "name",
 				"A message should be a short, complete sentence.");
 	}
 	

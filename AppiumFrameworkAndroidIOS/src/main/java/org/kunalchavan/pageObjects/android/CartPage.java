@@ -87,7 +87,7 @@ public class CartPage extends AndroidActions {
 	}
 	
 	public void checkboxCheck() {
-		waitAttributeContainsById("com.androidsample.generalstore:id/toolbar_title", "text", "Cart");
+		waitAttributeContainsById(driver,"com.androidsample.generalstore:id/toolbar_title", "text", "Cart");
 		checkbox.click();
 	}
 	
