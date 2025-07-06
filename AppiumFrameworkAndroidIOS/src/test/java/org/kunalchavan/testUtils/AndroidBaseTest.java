@@ -25,13 +25,14 @@ public class AndroidBaseTest extends AppiumUtils{
 	
 	@BeforeClass
 	public void setup() {
-		service = startAppiumServer();
+		prop = properties("/src/main/resources/globalData.properties");
+		service = startAppiumServer(prop.getProperty("ipAddress"),Integer.parseInt(prop.getProperty("port")));
 		options = new UiAutomator2Options();
-		options.setChromedriverExecutable("/Users/kunalchavan/Documents/chromedriver");
-		options.setDeviceName("Pixel 8");
-		options.setApp(System.getProperty("user.dir") + "/src/main/resources/General-Store.apk");
+		options.setChromedriverExecutable(prop.getProperty("ChromedriverExecutable"));
+		options.setDeviceName(prop.getProperty("AndroidDeviceName"));
+		options.setApp(System.getProperty("user.dir") + prop.getProperty("androidAPK"));
 		driver = new AndroidDriver(service.getUrl(), options);
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Long.parseLong(prop.getProperty("implicitlyWait"))));
 		formPage = new FormPage(driver);
 	}
 

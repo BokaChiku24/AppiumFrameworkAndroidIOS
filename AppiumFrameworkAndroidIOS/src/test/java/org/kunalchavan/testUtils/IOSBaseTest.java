@@ -22,19 +22,19 @@ public class IOSBaseTest extends AppiumUtils {
 
 	@BeforeClass
 	public void setup() {
-		service = startAppiumServer();
+		prop = properties("/src/main/resources/globalData.properties");
+		service = startAppiumServer(prop.getProperty("ipAddress"), Integer.parseInt(prop.getProperty("port")));
 		options = new XCUITestOptions();
-		options.setDeviceName("iPhone 16 Pro Max");
-		//options.setApp("/Users/kunalchavan/Library/Developer/Xcode/DerivedData/UIKitCatalog-gquhtmfnxjxpifgdmjdtvjcqmaxn/Build/Products/Debug-iphonesimulator/UIKitCatalog.app");
-		options.setApp("/Users/kunalchavan/Desktop/UIKitCatalog.app");
-		options.setPlatformName("iOS");
-		options.setPlatformVersion("18.5");
-		
+		options.setDeviceName(prop.getProperty("IOSDevice"));
+		options.setApp(prop.getProperty("iosIPA"));
+		options.setPlatformName(prop.getProperty("iossetPlatformName"));
+		options.setPlatformVersion(prop.getProperty("iossetPlatformVersion"));
+
 		// Appium installs WebDriver Agent in the iOS Apps (Simulator)
-		
-		options.setWdaLaunchTimeout(Duration.ofSeconds(30));
-		driver = new IOSDriver(service.getUrl(),options);
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+		options.setWdaLaunchTimeout(Duration.ofSeconds(Long.parseLong(prop.getProperty("iosimplicitlyWait"))));
+		driver = new IOSDriver(service.getUrl(), options);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Long.parseLong(prop.getProperty("implicitlyWait"))));
 		page = new HomePage(driver);
 	}
 
