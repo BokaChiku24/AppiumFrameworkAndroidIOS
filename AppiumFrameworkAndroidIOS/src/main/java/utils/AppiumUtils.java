@@ -18,12 +18,23 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.service.local.AppiumDriverLocalService;
+import io.appium.java_client.service.local.AppiumServiceBuilder;
 
 // Common for Android & IOS
 public class AppiumUtils {
 	public double priceTotal = 0;
 	public double productFinal = 0;
 	WebDriverWait wait;
+	AppiumDriverLocalService service;
+
+	public AppiumDriverLocalService startAppiumServer() {
+		service = new AppiumServiceBuilder()
+				.withAppiumJS(new File("/usr/local/lib/node_modules/appium/build/lib/main.js"))
+				.withIPAddress("127.0.0.1").usingPort(4723).build();
+		service.start();
+		return service;
+	}
 
 	public void addition(List<WebElement> list) {
 		for (int i = 0; i < list.size(); i++) {

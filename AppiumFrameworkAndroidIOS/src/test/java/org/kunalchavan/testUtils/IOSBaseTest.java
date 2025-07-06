@@ -1,9 +1,5 @@
 package org.kunalchavan.testUtils;
 
-import java.io.File;
-import java.net.MalformedURLException;
-import java.net.URI;
-import java.net.URISyntaxException;
 import java.time.Duration;
 
 import org.kunalchavan.pageObjects.ios.HomePage;
@@ -14,9 +10,9 @@ import org.testng.annotations.BeforeClass;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.options.XCUITestOptions;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
-import io.appium.java_client.service.local.AppiumServiceBuilder;
+import utils.AppiumUtils;
 
-public class IOSBaseTest {
+public class IOSBaseTest extends AppiumUtils {
 
 	AppiumDriverLocalService service;
 	XCUITestOptions options;
@@ -26,10 +22,7 @@ public class IOSBaseTest {
 
 	@BeforeClass
 	public void setup() {
-		service = new AppiumServiceBuilder()
-				.withAppiumJS(new File("/usr/local/lib/node_modules/appium/build/lib/main.js"))
-				.withIPAddress("127.0.0.1").usingPort(4723).build();
-		service.start();
+		service = startAppiumServer();
 		options = new XCUITestOptions();
 		options.setDeviceName("iPhone 16 Pro Max");
 		//options.setApp("/Users/kunalchavan/Library/Developer/Xcode/DerivedData/UIKitCatalog-gquhtmfnxjxpifgdmjdtvjcqmaxn/Build/Products/Debug-iphonesimulator/UIKitCatalog.app");
@@ -40,12 +33,7 @@ public class IOSBaseTest {
 		// Appium installs WebDriver Agent in the iOS Apps (Simulator)
 		
 		options.setWdaLaunchTimeout(Duration.ofSeconds(30));
-		try {
-			driver = new IOSDriver(new URI("http://127.0.0.1:4723").toURL(),options);
-		} catch (MalformedURLException | URISyntaxException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		driver = new IOSDriver(service.getUrl(),options);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		page = new HomePage(driver);
 	}
