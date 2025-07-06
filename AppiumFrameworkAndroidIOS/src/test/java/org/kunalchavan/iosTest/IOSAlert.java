@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 public class IOSAlert extends IOSBaseTest {
 
-	@Test
+	@Test(groups = {"Smoke"})
 	public void iOSBasic() {
 		AlertPage alert = page.goToAlert();
 		alert.textEntryAlert("Kunal Chavan");

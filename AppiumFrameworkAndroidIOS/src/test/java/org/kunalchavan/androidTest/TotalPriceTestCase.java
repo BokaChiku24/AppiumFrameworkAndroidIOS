@@ -13,16 +13,16 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class TotalPriceTestCase extends AndroidBaseTest {
-	
-	@BeforeMethod
+
+	@BeforeMethod(alwaysRun = true)
 	public void preSetup() {
 		// Set the application screen to home page
 		activityStart("com.androidsample.generalstore/com.androidsample.generalstore.SplashActivity");
-		//MainActivity, SplashActivity
+		// MainActivity, SplashActivity
 	}
-	
-	@Test(dataProvider = "totalPrice")
-	public void totalPrice(HashMap<String,String> input) {
+
+	@Test(dataProvider = "totalPrice", groups = { "Smoke" })
+	public void totalPrice(HashMap<String, String> input) {
 		String country = input.get("Country");
 		formPage.countryDropdown(country);
 		formPage.setName(input.get("Name"));
@@ -43,24 +43,25 @@ public class TotalPriceTestCase extends AndroidBaseTest {
 	}
 
 	@Test(dataProvider = "validaton")
-	public void toastMessage(String countryName,String gender) {
+	public void toastMessage(String countryName, String gender) {
 		String country = countryName;
 		formPage.countryDropdown(country);
 		formPage.setGender(gender);
 		String message = formPage.getToastMessage();
 		Assert.assertEquals(message, "Please enter your name");
 	}
-	
+
 	@DataProvider(name = "totalPrice")
 	public Object[][] getDataTotalPrice() throws IOException {
-		List<HashMap<String,String>>data = getJsonData(System.getProperty("user.dir") + "/src/test/resources/testData/eCommerce.json");
-		//return new Object[][] {{"Argentina","Kunal Chavan","Male"}};
-		return new Object[][] {{data.get(0)}};
+		List<HashMap<String, String>> data = getJsonData(
+				System.getProperty("user.dir") + "/src/test/resources/testData/eCommerce.json");
+		// return new Object[][] {{"Argentina","Kunal Chavan","Male"}};
+		return new Object[][] { { data.get(0) } };
 	}
-	
+
 	@DataProvider(name = "validaton")
-	public Object[][] getDataValidation(){
-		return new Object[][] {{"Argentina","Male"},{"Brazil","Female"}};
+	public Object[][] getDataValidation() {
+		return new Object[][] { { "Argentina", "Male" }, { "Brazil", "Female" } };
 	}
 
 }

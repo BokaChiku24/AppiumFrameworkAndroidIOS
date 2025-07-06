@@ -23,7 +23,7 @@ public class AndroidBaseTest extends AppiumUtils{
 	public FormPage formPage;
 	Activity activityName;
 	
-	@BeforeClass
+	@BeforeClass(alwaysRun = true)
 	public void setup() {
 		prop = properties("/src/main/resources/globalData.properties");
 		service = startAppiumServer(prop.getProperty("ipAddress"),Integer.parseInt(prop.getProperty("port")));
@@ -44,7 +44,7 @@ public class AndroidBaseTest extends AppiumUtils{
 
 	}
 
-	@AfterClass
+	@AfterClass(alwaysRun = true)
 	public void tearDown() {
 		driver.quit();
 		service.stop();

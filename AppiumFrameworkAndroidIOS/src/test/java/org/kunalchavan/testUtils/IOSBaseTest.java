@@ -20,7 +20,7 @@ public class IOSBaseTest extends AppiumUtils {
 	public HomePage page;
 	WebDriverWait wait;
 
-	@BeforeClass
+	@BeforeClass(alwaysRun = true)
 	public void setup() {
 		prop = properties("/src/main/resources/globalData.properties");
 		service = startAppiumServer(prop.getProperty("ipAddress"), Integer.parseInt(prop.getProperty("port")));
@@ -38,7 +38,7 @@ public class IOSBaseTest extends AppiumUtils {
 		page = new HomePage(driver);
 	}
 
-	@AfterClass
+	@AfterClass(alwaysRun = true)
 	public void tearDown() {
 		driver.quit();
 		service.stop();

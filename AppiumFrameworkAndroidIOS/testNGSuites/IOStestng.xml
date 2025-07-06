@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-<groups>
-<run>
-<include name="Smoke">
-</include>
-</run>
-</groups>
 <listeners>
 <listener class-name="org.kunalchavan.testUtils.Listeners"></listener>
 </listeners>
-  <test thread-count="5" name="Android Test">
+  <test thread-count="5" name="IOS Test">
     <classes>
-      <class name="org.kunalchavan.androidTest.TotalPriceTestCase"/>
+      <class name="org.kunalchavan.iosTest.IOSAlert"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
