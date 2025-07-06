@@ -17,7 +17,6 @@ public class TotalPriceTestCase extends AndroidBaseTest {
 		productCatalouge.addItemToCartByIndex(0);
 		productCatalouge.addItemToCartByIndex(0);
 		CartPage cartPage = productCatalouge.goToTheCartPage();
-		waitAttributeContainsById("com.androidsample.generalstore:id/toolbar_title", "text", "Cart");
 		Assert.assertEquals(cartPage.getFinalPrice(), cartPage.getPrice());
 		cartPage.checkboxCheck();
 		cartPage.termButton();

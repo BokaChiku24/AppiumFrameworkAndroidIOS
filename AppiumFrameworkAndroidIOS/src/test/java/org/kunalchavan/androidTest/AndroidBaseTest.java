@@ -7,9 +7,6 @@ import java.net.URISyntaxException;
 import java.time.Duration;
 
 import org.kunalchavan.pageObjects.android.FormPage;
-import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
@@ -24,7 +21,6 @@ public class AndroidBaseTest {
 	UiAutomator2Options options;
 	public AndroidDriver driver;
 	public FormPage formPage;
-	WebDriverWait wait;
 
 	@BeforeClass
 	public void setup() {
@@ -44,15 +40,8 @@ public class AndroidBaseTest {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-
 	}
-
-	public void waitAttributeContainsById(String id, String attribute, String value) {
-
-		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.attributeContains(driver.findElement(By.id(id)), attribute, value));
-	}
+	
 
 	@AfterClass
 	public void tearDown() {

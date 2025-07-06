@@ -11,8 +11,6 @@ public class IOSAlert extends IOSBaseTest {
 		AlertPage alert = page.goToAlert();
 		alert.textEntryAlert("Kunal Chavan");
 		alert.confirmAlert();
-		waitAttributeContainsByAccessibilityId("A message should be a short, complete sentence.", "name",
-				"A message should be a short, complete sentence.");
 		String alertMessage = alert.ConfirmAlertMessage();
 		Assert.assertEquals(alertMessage, "A message should be a short, complete sentence.");
 		alert.confirmAlertAccept();

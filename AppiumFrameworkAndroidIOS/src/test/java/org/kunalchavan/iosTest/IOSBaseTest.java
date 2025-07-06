@@ -7,13 +7,10 @@ import java.net.URISyntaxException;
 import java.time.Duration;
 
 import org.kunalchavan.pageObjects.ios.HomePage;
-import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
-import io.appium.java_client.AppiumBy;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.options.XCUITestOptions;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
@@ -51,18 +48,6 @@ public class IOSBaseTest {
 		}
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		page = new HomePage(driver);
-	}
-	
-	public void waitAttributeContainsById(String id, String attribute, String value) {
-
-		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.attributeContains(driver.findElement(By.id(id)), attribute, value));
-	}
-	
-	public void waitAttributeContainsByAccessibilityId(String id, String attribute, String value) {
-
-		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.attributeContains(driver.findElement(AppiumBy.accessibilityId(id)), attribute, value));
 	}
 
 	@AfterClass
