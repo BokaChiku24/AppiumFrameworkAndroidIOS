@@ -1,4 +1,4 @@
-package org.kunalchavan.iosTest;
+package org.kunalchavan.testUtils;
 
 import java.io.File;
 import java.net.MalformedURLException;
@@ -9,7 +9,6 @@ import java.time.Duration;
 import org.kunalchavan.pageObjects.ios.HomePage;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 
 import io.appium.java_client.ios.IOSDriver;
@@ -22,7 +21,7 @@ public class IOSBaseTest {
 	AppiumDriverLocalService service;
 	XCUITestOptions options;
 	IOSDriver driver;
-	HomePage page;
+	public HomePage page;
 	WebDriverWait wait;
 
 	@BeforeClass
@@ -51,7 +50,6 @@ public class IOSBaseTest {
 		page = new HomePage(driver);
 	}
 
-	@AfterMethod
 	@AfterClass
 	public void tearDown() {
 		driver.quit();

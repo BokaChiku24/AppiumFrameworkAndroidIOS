@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.kunalchavan.pageObjects.android.CartPage;
 import org.kunalchavan.pageObjects.android.ProductCatalogue;
+import org.kunalchavan.testUtils.AndroidBaseTest;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;

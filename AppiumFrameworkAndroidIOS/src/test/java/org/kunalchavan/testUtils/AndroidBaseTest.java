@@ -1,4 +1,4 @@
-package org.kunalchavan.androidTest;
+package org.kunalchavan.testUtils;
 
 import java.io.File;
 import java.net.MalformedURLException;
