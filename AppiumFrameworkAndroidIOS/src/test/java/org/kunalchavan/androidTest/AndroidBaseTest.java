@@ -7,9 +7,13 @@ import java.net.URISyntaxException;
 import java.time.Duration;
 
 import org.kunalchavan.pageObjects.android.FormPage;
+import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
+import com.google.common.collect.ImmutableMap;
+
+import io.appium.java_client.android.Activity;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
@@ -21,7 +25,8 @@ public class AndroidBaseTest {
 	UiAutomator2Options options;
 	public AndroidDriver driver;
 	public FormPage formPage;
-
+	Activity activityName;
+	
 	@BeforeClass
 	public void setup() {
 		service = new AppiumServiceBuilder()
@@ -42,6 +47,13 @@ public class AndroidBaseTest {
 		}
 	}
 	
+	public void activityStart(String activity) {
+		// activityName = new Activity(packageName, activity);
+		// driver.startActivity(activity); The method startActivity(Activity) from the type StartsActivity is deprecated
+		((JavascriptExecutor) driver).executeScript("mobile: startActivity",
+				ImmutableMap.of("intent",activity));
+
+	}
 
 	@AfterClass
 	public void tearDown() {

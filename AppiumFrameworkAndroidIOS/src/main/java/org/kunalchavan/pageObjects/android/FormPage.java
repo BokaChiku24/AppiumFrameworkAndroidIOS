@@ -43,6 +43,12 @@ public class FormPage extends AndroidActions {
 	private WebElement shopButton;
 	//driver.findElement(By.className("android.widget.Button")).click();
 	
+	@AndroidFindBy(xpath = "(//android.widget.Toast)[1]")
+	private WebElement toastMessage;
+	
+	//driver.findElement(By.xpath("(//android.widget.Toast)[1]")).getAttribute("name")
+	
+	
 	public void countryDropdown(String country) {
 		countrySelection.click();
 		scrollToText(country);
@@ -62,6 +68,11 @@ public class FormPage extends AndroidActions {
 			genderFemale.click();
 		else
 			genderMale.click();
+	}
+	
+	public String getToastMessage() {
+		shopButton.click();
+		return toastMessage.getAttribute("name");
 	}
 	
 	public ProductCatalogue submitForm() {
