@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-05T19:22:10 IST" name="Default suite" finished-at="2025-07-05T19:22:26 IST" duration-ms="16478">
+  <suite started-at="2025-07-06T10:40:46 IST" name="Default suite" finished-at="2025-07-06T10:41:13 IST" duration-ms="26855">
     <groups>
     </groups>
-    <test started-at="2025-07-05T19:22:10 IST" name="Default test" finished-at="2025-07-05T19:22:26 IST" duration-ms="16478">
-      <class name="org.kunalchavan.iosTest.IOSAlert">
-        <test-method is-config="true" signature="setup()[pri:0, instance:org.kunalchavan.iosTest.IOSAlert@609e8838]" started-at="2025-07-05T19:22:10 IST" name="setup" finished-at="2025-07-05T19:22:14 IST" duration-ms="3991" status="PASS">
+    <test started-at="2025-07-06T10:40:46 IST" name="Default test" finished-at="2025-07-06T10:41:13 IST" duration-ms="26855">
+      <class name="org.kunalchavan.androidTest.TotalPriceTestCase">
+        <test-method is-config="true" signature="setup()[pri:0, instance:org.kunalchavan.androidTest.TotalPriceTestCase@2b30a42c]" started-at="2025-07-06T10:40:46 IST" name="setup" finished-at="2025-07-06T10:40:53 IST" duration-ms="6831" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="iOSBasic()[pri:0, instance:org.kunalchavan.iosTest.IOSAlert@609e8838]" started-at="2025-07-05T19:22:14 IST" name="iOSBasic" finished-at="2025-07-05T19:22:20 IST" duration-ms="5978" status="PASS">
+        <test-method signature="totalPrice()[pri:0, instance:org.kunalchavan.androidTest.TotalPriceTestCase@2b30a42c]" started-at="2025-07-06T10:40:53 IST" name="totalPrice" finished-at="2025-07-06T10:41:08 IST" duration-ms="15015" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- iOSBasic -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.kunalchavan.iosTest.IOSAlert@609e8838]" started-at="2025-07-05T19:22:20 IST" name="tearDown" finished-at="2025-07-05T19:22:26 IST" duration-ms="6489" status="PASS">
+        </test-method> <!-- totalPrice -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.kunalchavan.androidTest.TotalPriceTestCase@2b30a42c]" started-at="2025-07-06T10:41:08 IST" name="tearDown" finished-at="2025-07-06T10:41:13 IST" duration-ms="4989" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- org.kunalchavan.iosTest.IOSAlert -->
+      </class> <!-- org.kunalchavan.androidTest.TotalPriceTestCase -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

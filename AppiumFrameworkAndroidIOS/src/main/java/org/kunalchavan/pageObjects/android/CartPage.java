@@ -14,8 +14,8 @@ import utils.AndroidActions;
 public class CartPage extends AndroidActions {
 
 	AndroidDriver driver;
-	double priceTotal = 0;
-	double productFinal = 0;
+	//double priceTotal = 0;
+	//double productFinal = 0;
 	
 	@AndroidFindBy(xpath="//android.widget.TextView[@resource-id='com.androidsample.generalstore:id/productPrice']")
 	private List<WebElement> productPriceList;
@@ -66,11 +66,13 @@ public class CartPage extends AndroidActions {
 		return productFinal = Double.parseDouble(totalAmount.getText().replace("$", ""));
 	}
 	
-	private void addition(List<WebElement> list) {
+	/*
+	public void addition(List<WebElement> list) {
 		for (int i = 0; i < list.size(); i++) {
 			priceTotal = priceTotal + Double.parseDouble(list.get(i).getText().replace("$", ""));
 		}
 	}
+	*/
 	
 	public void termButton() {
 		logPress(termsButton);
