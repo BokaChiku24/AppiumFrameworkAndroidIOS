@@ -1,25 +1,33 @@
 package org.kunalchavan.androidTest;
 
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.List;
+
 import org.kunalchavan.pageObjects.android.CartPage;
 import org.kunalchavan.pageObjects.android.ProductCatalogue;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class TotalPriceTestCase extends AndroidBaseTest {
+import utils.AppiumUtils;
 
+public class TotalPriceTestCase extends AndroidBaseTest {
+	
 	@BeforeMethod
 	public void preSetup() {
 		// Set the application screen to home page
 		activityStart("com.androidsample.generalstore/com.androidsample.generalstore.SplashActivity");
+		//MainActivity, SplashActivity
 	}
-
-	@Test()
-	public void totalPrice() {
-		String country = "Argentina";
+	
+	@Test(dataProvider = "totalPrice")
+	public void totalPrice(HashMap<String,String> input) {
+		String country = input.get("Country");
 		formPage.countryDropdown(country);
-		formPage.setName("Kunal Chavan");
-		formPage.setGender("Female");
+		formPage.setName(input.get("Name"));
+		formPage.setGender(input.get("Gender"));
 		ProductCatalogue productCatalouge = formPage.submitForm();
 		productCatalouge.addItemToCartByIndex(0);
 		productCatalouge.addItemToCartByIndex(0);
@@ -35,13 +43,25 @@ public class TotalPriceTestCase extends AndroidBaseTest {
 		cartPage.submitOrder();
 	}
 
-	@Test
-	public void toastMessage() {
-		String country = "Argentina";
+	@Test(dataProvider = "validaton")
+	public void toastMessage(String countryName,String gender) {
+		String country = countryName;
 		formPage.countryDropdown(country);
-		formPage.setGender("Female");
+		formPage.setGender(gender);
 		String message = formPage.getToastMessage();
 		Assert.assertEquals(message, "Please enter your name");
+	}
+	
+	@DataProvider(name = "totalPrice")
+	public Object[][] getDataTotalPrice() throws IOException {
+		List<HashMap<String,String>>data = AppiumUtils.getJsonData(System.getProperty("user.dir") + "/src/test/resources/testData/eCommerce.json");
+		//return new Object[][] {{"Argentina","Kunal Chavan","Male"}};
+		return new Object[][] {{data.get(0)}};
+	}
+	
+	@DataProvider(name = "validaton")
+	public Object[][] getDataValidation(){
+		return new Object[][] {{"Argentina","Male"},{"France","Female"}};
 	}
 
 }

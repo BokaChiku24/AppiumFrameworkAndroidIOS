@@ -3,8 +3,11 @@ package org.kunalchavan.pageObjects.android;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+
+import com.google.common.collect.ImmutableMap;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
@@ -78,5 +81,10 @@ public class FormPage extends AndroidActions {
 	public ProductCatalogue submitForm() {
 		shopButton.click();
 		return new ProductCatalogue(driver);
+	}
+	
+	public void setActivity() {
+		((JavascriptExecutor) driver).executeScript("mobile: startActivity",
+				ImmutableMap.of("intent","com.androidsample.generalstore/com.androidsample.generalstore.MainActivity"));
 	}
 }

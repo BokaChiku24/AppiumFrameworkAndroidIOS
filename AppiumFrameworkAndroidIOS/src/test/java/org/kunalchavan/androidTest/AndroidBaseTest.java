@@ -19,7 +19,7 @@ import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
 
-public class AndroidBaseTest {
+public class AndroidBaseTest{
 
 	AppiumDriverLocalService service;
 	UiAutomator2Options options;
@@ -41,12 +41,13 @@ public class AndroidBaseTest {
 			driver = new AndroidDriver(new URI("http://127.0.0.1:4723/").toURL(), options);
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 			formPage = new FormPage(driver);
+			
 		} catch (MalformedURLException | URISyntaxException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
-	
+
 	public void activityStart(String activity) {
 		// activityName = new Activity(packageName, activity);
 		// driver.startActivity(activity); The method startActivity(Activity) from the type StartsActivity is deprecated
