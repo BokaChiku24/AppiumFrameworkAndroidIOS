@@ -8,6 +8,7 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import utils.IOSActions;
 
+//GrandParent(AppiumUtils) -> IOSActions -> HomePage
 public class HomePage extends IOSActions {
 
 	IOSDriver driver;

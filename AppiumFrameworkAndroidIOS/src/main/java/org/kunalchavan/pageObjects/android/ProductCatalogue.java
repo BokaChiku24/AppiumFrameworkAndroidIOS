@@ -10,6 +10,7 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import utils.AndroidActions;
 
+//GrandParent(AppiumUtils) -> AndroidActions -> ProductCatalogue
 public class ProductCatalogue extends AndroidActions {
 	AndroidDriver driver;
 	

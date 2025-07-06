@@ -8,6 +8,7 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import utils.IOSActions;
 
+//GrandParent(AppiumUtils) -> IOSActions -> AlertPage
 public class AlertPage extends IOSActions {
 	IOSDriver driver;
 	
