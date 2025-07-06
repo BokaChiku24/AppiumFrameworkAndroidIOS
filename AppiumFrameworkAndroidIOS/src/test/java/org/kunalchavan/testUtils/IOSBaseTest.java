@@ -23,7 +23,8 @@ public class IOSBaseTest extends AppiumUtils {
 	@BeforeClass(alwaysRun = true)
 	public void setup() {
 		prop = properties("/src/main/resources/globalData.properties");
-		service = startAppiumServer(prop.getProperty("ipAddress"), Integer.parseInt(prop.getProperty("port")));
+		String ipAddress = System.getProperty("ipAddress")!= null ? System.getProperty("ipAddress") : prop.getProperty("ipAddress");
+		service = startAppiumServer(ipAddress, Integer.parseInt(prop.getProperty("port")));
 		options = new XCUITestOptions();
 		options.setDeviceName(prop.getProperty("IOSDevice"));
 		options.setApp(prop.getProperty("iosIPA"));
