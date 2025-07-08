@@ -1,0 +1,59 @@
+
+1) Download Jenkis Stable Version from Jenkins official WebSite
+
+2) Download Generic Java Package (.war) file
+
+3) Open the command prompt or terminal
+
+4) Go to the downloaded (.war) folder 
+
+5) Type the command 'java -jar jenkins.war -httpPort=8080' 
+
+6) Open the Jenkins
+
+7) Hit on the 'New Item'
+
+8) Enter the project name and start with Free style project (Later modify it into maven)
+
+9) Go to the 'Source Code Management' 
+
+10) Select the 'Git' (Note if the project is on the local machine then provide project path by 'Advance' -> 'Use custom workspace')
+
+11) Provide the 'Repository URL' and credentials
+
+12) Go to the 'Build'
+
+13) Select the 'Invoke top-level Maven targets'
+
+14) Provide the goals: 'test -PRegression'
+
+15) Click on the save
+
+16) Hit on the 'Build Now'
+
+
+
+
+-----------------------------------------------------------------------------
+
+ ******* For Parameterization *******
+ 
+ 1) Open the Item.Project
+ 
+ 2) Hit on the 'Configure' 
+ 
+ 3) Under the 'General' tab select the - 'This project is parameterized' 
+ 
+ 4) Select the 'This project is parameterized' checkbox
+ 
+ 5) Select the 'Choice Parameter' 
+ 
+ 6) Name (Variable) - Profile and Choices (Value) - it should be same as per the pom.xml id name
+ 
+ 7) Save settings
+ 
+ 8) Go to the 'Build'
+ 
+ 9) Remove hard-coded command and type dynamic command 
+ 
+    test -P"$Profile"
