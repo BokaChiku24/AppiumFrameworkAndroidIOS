@@ -1,12 +1,12 @@
-package org.kunalchavan.androidTest;
+package org.kunalchavan.androidtest;
 
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 
-import org.kunalchavan.pageObjects.android.CartPage;
-import org.kunalchavan.pageObjects.android.ProductCatalogue;
-import org.kunalchavan.testUtils.AndroidBaseTest;
+import org.kunalchavan.pageobjectmodel.android.CartPage;
+import org.kunalchavan.pageobjectmodel.android.ProductCatalogue;
+import org.kunalchavan.testutils.AndroidBaseTest;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;

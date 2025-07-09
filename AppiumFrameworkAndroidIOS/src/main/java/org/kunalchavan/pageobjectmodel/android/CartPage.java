@@ -1,4 +1,4 @@
-package org.kunalchavan.pageObjects.android;
+package org.kunalchavan.pageobjectmodel.android;
 
 import java.util.List;
 

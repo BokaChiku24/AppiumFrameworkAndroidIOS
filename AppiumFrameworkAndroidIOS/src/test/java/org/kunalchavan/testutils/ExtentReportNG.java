@@ -1,4 +1,4 @@
-package org.kunalchavan.testUtils;
+package org.kunalchavan.testutils;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;

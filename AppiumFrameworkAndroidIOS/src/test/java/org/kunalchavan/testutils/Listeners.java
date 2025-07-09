@@ -1,4 +1,4 @@
-package org.kunalchavan.testUtils;
+package org.kunalchavan.testutils;
 
 import java.io.IOException;
 

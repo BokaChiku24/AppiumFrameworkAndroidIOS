@@ -1,8 +1,8 @@
-package org.kunalchavan.testUtils;
+package org.kunalchavan.testutils;
 
 import java.time.Duration;
 
-import org.kunalchavan.pageObjects.android.FormPage;
+import org.kunalchavan.pageobjectmodel.android.FormPage;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;

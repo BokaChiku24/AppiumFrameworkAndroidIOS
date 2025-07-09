@@ -1,4 +1,4 @@
-package org.kunalchavan.pageObjects.ios;
+package org.kunalchavan.pageobjectmodel.ios;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;

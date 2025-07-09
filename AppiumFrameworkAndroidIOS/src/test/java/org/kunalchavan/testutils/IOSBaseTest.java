@@ -1,8 +1,8 @@
-package org.kunalchavan.testUtils;
+package org.kunalchavan.testutils;
 
 import java.time.Duration;
 
-import org.kunalchavan.pageObjects.ios.HomePage;
+import org.kunalchavan.pageobjectmodel.ios.HomePage;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;

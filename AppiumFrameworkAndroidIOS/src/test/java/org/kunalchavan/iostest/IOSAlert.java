@@ -1,7 +1,7 @@
-package org.kunalchavan.iosTest;
+package org.kunalchavan.iostest;
 
-import org.kunalchavan.pageObjects.ios.AlertPage;
-import org.kunalchavan.testUtils.IOSBaseTest;
+import org.kunalchavan.pageobjectmodel.ios.AlertPage;
+import org.kunalchavan.testutils.IOSBaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
