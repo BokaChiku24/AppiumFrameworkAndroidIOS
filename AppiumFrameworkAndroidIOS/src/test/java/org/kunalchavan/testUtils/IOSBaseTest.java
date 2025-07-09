@@ -33,9 +33,9 @@ public class IOSBaseTest extends AppiumUtils {
 
 		// Appium installs WebDriver Agent in the iOS Apps (Simulator)
 
-		options.setWdaLaunchTimeout(Duration.ofSeconds(Long.parseLong(prop.getProperty("iosimplicitlyWait"))));
+		options.setWdaLaunchTimeout(Duration.ofSeconds(Integer.parseInt(prop.getProperty("iosimplicitlyWait"))));
 		driver = new IOSDriver(service.getUrl(), options);
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Long.parseLong(prop.getProperty("implicitlyWait"))));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Integer.parseInt(prop.getProperty("implicitlyWait"))));
 		page = new HomePage(driver);
 	}
 

@@ -68,7 +68,6 @@
         <version>3.5.3</version>
         <configuration>
           <suiteXmlFiles>
-            <suiteXmlFile>testNGSuites/Androidtestng.xml</suiteXmlFile>
             <suiteXmlFile>testNGSuites/IOStestng.xml</suiteXmlFile>
           </suiteXmlFiles>
         </configuration>

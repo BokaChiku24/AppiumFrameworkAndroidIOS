@@ -33,7 +33,7 @@ public class AndroidBaseTest extends AppiumUtils{
 		options.setDeviceName(prop.getProperty("AndroidDeviceName"));
 		options.setApp(System.getProperty("user.dir") + prop.getProperty("androidAPK"));
 		driver = new AndroidDriver(service.getUrl(), options);
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Long.parseLong(prop.getProperty("implicitlyWait"))));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Integer.parseInt(prop.getProperty("implicitlyWait"))));
 		formPage = new FormPage(driver);
 	}
 
