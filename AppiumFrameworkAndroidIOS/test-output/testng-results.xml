@@ -2,23 +2,23 @@
 <testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-06T18:57:17 IST" name="Suite" finished-at="2025-07-06T18:58:00 IST" duration-ms="43435">
+  <suite started-at="2025-07-09T14:28:49 IST" name="Suite" finished-at="2025-07-09T14:29:35 IST" duration-ms="45487">
     <groups>
       <group name="Smoke">
         <method signature="TotalPriceTestCase.totalPrice(java.util.HashMap)[pri:0, instance:org.kunalchavan.androidTest.TotalPriceTestCase@20ca951f]" name="totalPrice" class="org.kunalchavan.androidTest.TotalPriceTestCase"/>
       </group> <!-- Smoke -->
     </groups>
-    <test started-at="2025-07-06T18:57:17 IST" name="Android Test" finished-at="2025-07-06T18:58:00 IST" duration-ms="43435">
+    <test started-at="2025-07-09T14:28:49 IST" name="Android Test" finished-at="2025-07-09T14:29:35 IST" duration-ms="45487">
       <class name="org.kunalchavan.androidTest.TotalPriceTestCase">
-        <test-method is-config="true" signature="setup()[pri:0, instance:org.kunalchavan.androidTest.TotalPriceTestCase@20ca951f]" started-at="2025-07-06T18:57:17 IST" name="setup" finished-at="2025-07-06T18:57:24 IST" duration-ms="6552" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:org.kunalchavan.androidTest.TotalPriceTestCase@20ca951f]" started-at="2025-07-09T14:28:49 IST" name="setup" finished-at="2025-07-09T14:28:57 IST" duration-ms="7996" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="preSetup()[pri:0, instance:org.kunalchavan.androidTest.TotalPriceTestCase@20ca951f]" started-at="2025-07-06T18:57:24 IST" name="preSetup" finished-at="2025-07-06T18:57:24 IST" duration-ms="44" status="PASS">
+        <test-method is-config="true" signature="preSetup()[pri:0, instance:org.kunalchavan.androidTest.TotalPriceTestCase@20ca951f]" started-at="2025-07-09T14:28:58 IST" name="preSetup" finished-at="2025-07-09T14:28:58 IST" duration-ms="52" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preSetup -->
-        <test-method signature="totalPrice(java.util.HashMap)[pri:0, instance:org.kunalchavan.androidTest.TotalPriceTestCase@20ca951f]" started-at="2025-07-06T18:57:24 IST" name="totalPrice" data-provider="totalPrice" finished-at="2025-07-06T18:57:55 IST" duration-ms="31714" status="PASS">
+        <test-method signature="totalPrice(java.util.HashMap)[pri:0, instance:org.kunalchavan.androidTest.TotalPriceTestCase@20ca951f]" started-at="2025-07-09T14:28:58 IST" name="totalPrice" data-provider="totalPrice" finished-at="2025-07-09T14:29:30 IST" duration-ms="31969" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -29,7 +29,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- totalPrice -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.kunalchavan.androidTest.TotalPriceTestCase@20ca951f]" started-at="2025-07-06T18:57:55 IST" name="tearDown" finished-at="2025-07-06T18:58:00 IST" duration-ms="4983" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.kunalchavan.androidTest.TotalPriceTestCase@20ca951f]" started-at="2025-07-09T14:29:30 IST" name="tearDown" finished-at="2025-07-09T14:29:35 IST" duration-ms="5324" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
