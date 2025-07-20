@@ -1,39 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-09T14:28:49 IST" name="Suite" finished-at="2025-07-09T14:29:35 IST" duration-ms="45487">
+  <suite started-at="2025-07-20T13:56:27 IST" name="Suite" finished-at="2025-07-20T13:56:59 IST" duration-ms="31787">
     <groups>
       <group name="Smoke">
-        <method signature="TotalPriceTestCase.totalPrice(java.util.HashMap)[pri:0, instance:org.kunalchavan.androidTest.TotalPriceTestCase@20ca951f]" name="totalPrice" class="org.kunalchavan.androidTest.TotalPriceTestCase"/>
+        <method signature="IOSAlert.iOSBasic()[pri:0, instance:org.kunalchavan.iostest.IOSAlert@7fbdb894]" name="iOSBasic" class="org.kunalchavan.iostest.IOSAlert"/>
       </group> <!-- Smoke -->
     </groups>
-    <test started-at="2025-07-09T14:28:49 IST" name="Android Test" finished-at="2025-07-09T14:29:35 IST" duration-ms="45487">
-      <class name="org.kunalchavan.androidTest.TotalPriceTestCase">
-        <test-method is-config="true" signature="setup()[pri:0, instance:org.kunalchavan.androidTest.TotalPriceTestCase@20ca951f]" started-at="2025-07-09T14:28:49 IST" name="setup" finished-at="2025-07-09T14:28:57 IST" duration-ms="7996" status="PASS">
+    <test started-at="2025-07-20T13:56:27 IST" name="IOS Test" finished-at="2025-07-20T13:56:59 IST" duration-ms="31787">
+      <class name="org.kunalchavan.iostest.IOSAlert">
+        <test-method is-config="true" signature="setup()[pri:0, instance:org.kunalchavan.iostest.IOSAlert@7fbdb894]" started-at="2025-07-20T13:56:27 IST" name="setup" finished-at="2025-07-20T13:56:48 IST" duration-ms="21046" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="preSetup()[pri:0, instance:org.kunalchavan.androidTest.TotalPriceTestCase@20ca951f]" started-at="2025-07-09T14:28:58 IST" name="preSetup" finished-at="2025-07-09T14:28:58 IST" duration-ms="52" status="PASS">
+        <test-method signature="iOSBasic()[pri:0, instance:org.kunalchavan.iostest.IOSAlert@7fbdb894]" started-at="2025-07-20T13:56:48 IST" name="iOSBasic" finished-at="2025-07-20T13:56:54 IST" duration-ms="6082" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- preSetup -->
-        <test-method signature="totalPrice(java.util.HashMap)[pri:0, instance:org.kunalchavan.androidTest.TotalPriceTestCase@20ca951f]" started-at="2025-07-09T14:28:58 IST" name="totalPrice" data-provider="totalPrice" finished-at="2025-07-09T14:29:30 IST" duration-ms="31969" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Country=France, Gender=Male, Name=Kunal Chavan}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- totalPrice -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.kunalchavan.androidTest.TotalPriceTestCase@20ca951f]" started-at="2025-07-09T14:29:30 IST" name="tearDown" finished-at="2025-07-09T14:29:35 IST" duration-ms="5324" status="PASS">
+        </test-method> <!-- iOSBasic -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.kunalchavan.iostest.IOSAlert@7fbdb894]" started-at="2025-07-20T13:56:54 IST" name="tearDown" finished-at="2025-07-20T13:56:59 IST" duration-ms="4629" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- org.kunalchavan.androidTest.TotalPriceTestCase -->
-    </test> <!-- Android Test -->
+      </class> <!-- org.kunalchavan.iostest.IOSAlert -->
+    </test> <!-- IOS Test -->
   </suite> <!-- Suite -->
 </testng-results>

@@ -8,11 +8,11 @@
 </run>
 </groups>
 <listeners>
-<listener class-name="org.kunalchavan.testUtils.Listeners"></listener>
+<listener class-name="org.kunalchavan.testutils.Listeners"></listener>
 </listeners>
   <test thread-count="5" name="Android Test">
     <classes>
-      <class name="org.kunalchavan.androidTest.TotalPriceTestCase"/>
+      <class name="org.kunalchavan.androidtest.TotalPriceTestCase"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
